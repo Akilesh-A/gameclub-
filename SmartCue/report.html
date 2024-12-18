@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snokers</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    
+    <!----------Main Start--------------->
+    <main>
+        <section>
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-md-6">
+                        <p class="popup-exp-title">
+                            <u>Oct-2024</u>
+                            Closing Reports
+                        </p>
+                    </div>
+                    <div class="col-md-6 report-j-end">
+                        <a href="#">Oct-2024</a>
+                    </div>
+                </div>
+                <div class="popup-overflow-x">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>#</th>
+                                <th>Closing Date</th>
+                                <th>Closing Cash ($)</th>
+                                <th>Game Money ($)</th>
+                                <th>Canteen Income ($)</th>
+                                <th>Grand Total ($)</th>
+                                <th>Discount ($)</th>
+                                <th>Received ($)</th>
+                                <th></th>
+                            </tr>
+                        </tbody>
+                        <tbody class="list_players_tbody">
+                            <tr>
+                                <td>1</td>
+                                <td>04-Oct-2024
+                                    11:19 am</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>
+                                    <a class="report-view" href="#" onclick="popUpShow('#popupViewHistory')"><i class="fa fa-eye"></i> View </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2">Total</th>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!----------Main End--------------->
+    <!--------------View  History PopUp Start------------------------>
+    <div>
+        <div class="popup-bg-overlay popup-i-display-none" id="popupViewHistory">
+            <div class="popup-member-wrapper">
+                <div class="popu-border-b popup-p">
+                    <button class="popup-cr-n-cbtn" onclick="popupRemove('#popupViewHistory')">×</button>
+                    <div class="popup-cr-title">
+                        <i class="fa fa-list"></i>
+                        <p class="m-0">History</p>
+                        <p class="m-0 label label-info">Playing</p>
+                        <p class="m-0 label label-warning">Unpaid</p>
+                        <p class="m-0 label label-success">Paid</p>
+                    </div>
+                </div>
+                <div class="popu-border-b popup-p popup-overflow-x">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Member</th>
+                                <th>Table</th>
+                                <th>Check In</th>
+                                <th>Check Out</th>
+                                <th>Minutes </th>
+                                <th>Rate ($)</th>
+                                <th>Game Money ($)</th>
+                                <th>Canteen ($) </th>
+                                <th>Total</th>
+                                <th>Discount</th>
+                                <th>Grand Total ($)</th>
+                                <th>Options</th>
+                            </tr>
+                            <tr class="list_players_tbody">
+                                <td colspan="13">
+                                    <span class="default_msg">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                        You have not added any thing yet!
+                                    </span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="6">Total</th>
+                                <th class="summary_play_time">0 Mins</th>
+                                <th></th>
+                                <th class="summary_total_bill">$ 0</th>
+                                <th class="summary_canteen_total">$ 0</th>
+                                <th class="summary_grand_total">$ 0</th>
+                                <th class="summary_discount">$ 0</th>
+                                <th></th>
+                                <th class="summary_paid_amount">$ 0</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="popup-p popupcr-df">
+                    <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#popupViewHistory')"><i
+                            class="fa-solid fa-xmark"></i> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------View  Hestory PopUp End------------------------>
+
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

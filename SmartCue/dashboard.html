@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snokers</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <div id="AdminNavBar"></div>
+    <div id="AdminSideBar"></div>
+    <!---------Main Start--------->
+    <main>
+      <section>
+        <div class="admin-padding-left" id="adminPaddingLeft">
+          <div class="admin-hed-bg-wrap">
+            <div class="container-fluid">
+              <div>
+                <a href="#" class="ad-m-t">Adminland</a>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="adimin-pr-wrap">
+              <p class="ad-m-ustitle">Hi, <span>User</span>!</p>
+              <form>
+                <div class="row">
+                  <div class="col-md-4 col-lg-2">
+                    <label class="ad-p-label">Date From:</label>
+                    <input
+                      value=""
+                      type="date"
+                      class="ad-p-input form-control"
+                      name="date_from"
+                    />
+                  </div>
+                  <div class="col-md-4 col-lg-2">
+                    <label class="ad-p-label"> Date To:</label>
+                    <input
+                      value=""
+                      type="date"
+                      class="form-control ad-p-input"
+                      name="date_to"
+                    />
+                  </div>
+                  <div class="col-md-2 col-lg-2">
+                    <label>&nbsp;</label><br />
+                    <button type="submit" class="btn btn-outline-dark ad-p-btn">
+                      <i class="fa fa-filter"></i> &nbsp;Filter
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <a class="adm-a-p" href="#">Today</a> —
+                  <a class="adm-a-p" href="#">Last 7 Days</a> —
+                  <a class="adm-a-p" href="#">Last 30 Days</a>
+                </div>
+              </form>
+            </div>
+            <div>
+              <div class="row row-gap-3 mb-3">
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-c color-g">
+                    <p>Sales (Game)</p>
+                    <h1>0</h1>
+                    <a href="/reports/game-sales-report.html">View Details</a>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-c color-r">
+                    <p>Expenses</p>
+                    <h1>0</h1>
+                    <a href="/expense/expense.html">View Details</a>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-blue">
+                    <div class="row">
+                      <div class="col-7">
+                        <p class="adm-card-t color-blue">Users</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/user-management/users.html"
+                          class="adm-card-a color-blue"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-red">
+                    <div class="row">
+                      <div class="col-7">
+                        <p class="adm-card-t color-red">Table Management</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/tables/tables.html"
+                          class="adm-card-a color-red"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-table"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-pi">
+                    <div class="row p-2">
+                      <div class="col-7">
+                        <p class="adm-card-t color-pi">Bookings</p>
+                        <p class="adm-card-num">1</p>
+                        <a href="/booking.html" class="adm-card-a color-pi"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-calendar"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-or">
+                    <div class="row p-2">
+                      <div class="col-7">
+                        <p class="adm-card-t color-or">Table Rate Rule</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/table-rate-rules/table-rate-rules.html"
+                          class="adm-card-a color-or"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-percent"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-green">
+                    <div class="row p-2">
+                      <div class="col-8">
+                        <p class="adm-card-t color-green">Supplier</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/supplier/supplier.html"
+                          class="adm-card-a color-green"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-truck"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-blue">
+                    <div class="row">
+                      <div class="col-7">
+                        <p class="adm-card-t color-blue">
+                          Purchase Order (Bill)
+                        </p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/inventory/purchase_orders.html"
+                          class="adm-card-a color-blue"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-pur">
+                    <div class="row">
+                      <div class="col-7">
+                        <p class="adm-card-t color-pur">Members</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/members/members.html"
+                          class="adm-card-a color-pur"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-red">
+                    <div class="row">
+                      <div class="col-7">
+                        <p class="adm-card-t color-red">Recipes</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/kitchen/recipe.html"
+                          class="adm-card-a color-red"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-book"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="adm-p-card-wrapper h-100 adm-pe-card-blue">
+                    <div class="row">
+                      <div class="col-7">
+                        <p class="adm-card-t color-blue">Canteen Sale</p>
+                        <p class="adm-card-num">1</p>
+                        <a
+                          href="/reports/canteen-sales.html"
+                          class="adm-card-a color-blue"
+                          >View Details</a
+                        >
+                      </div>
+                      <div class="col-4 adm-p-i-opa">
+                        <i class="fa-solid fa-table"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!---------Main End----------->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

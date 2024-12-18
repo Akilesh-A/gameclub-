@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snokers</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body style="background-color: #f2f6fc;">
+    <div id="AdminNavBar"></div>
+    <div id="AdminSideBar"></div>
+    <!-----------Main Start--------------->
+    <main>
+        <section>
+            <div class="admin-padding-left" id="adminPaddingLeft">
+                <div class="admin-hed-bg-wrap">
+                    <div class="container-fluid">
+                        <div>
+                            <div>
+                                <a href="/dashboard.html" class="ad-m-t">Adminland</a>
+                                <span class="admin-t-p">/ Purchase Orders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="table-p-wrap mt-4">
+                        <div  class="table-p-head-wrap">
+                            <div>
+                                <p class="m-0 table-p-head-t" ><i class="fa-solid fa-cart-shopping"></i>Purchase Orders (Bill) <small>(<i> <span>2</span> records</i> )</small> </p>
+                            </div>
+                            <div class="table-p-head-btn-wrap">
+                                <a href="#" class="table-head-t-btn"><i class="fa-solid fa-trash"></i>View Deleted Records</a>
+                                <a href="/inventory/purchase_orders-create.html" class="table-head-C-btn"><i class="fa-solid fa-plus"></i>Create</a>
+                            </div>
+                        </div>
+                        <div  class="table-p-body-wrap">
+                            <form >
+                                <div class="row">
+                                    <div class="col-md-3 col-lg-2">
+                                        <label class="ad-p-label">Date From:</label>
+                                        <input value="" type="date" class="ad-p-input form-control" name="date_from">
+                                    </div>
+                                    <div class="col-md-3 col-lg-2">
+                                        <label class="ad-p-label"> Date To:</label>
+                                        <input value="" type="date" class="form-control ad-p-input " name="date_to">
+                                    </div>          
+                                    <div class="col-md-2 col-lg-2">
+                                        <label>&nbsp;</label><br>
+                                        <button type="submit" class="btn btn-outline-dark ad-p-btn">
+                                            <i class="fa fa-filter"></i> &nbsp;Filter
+                                        </button>
+                                    </div>   
+                                </div>
+                            </form>
+                            <div class="popup-overflow-x">
+                                <table class="table table-bordered mt-4 table-wraper-adnm table-font-style table-width-m">
+                                    <thead class="thead-border-bot">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Date</th>
+                                            <th>Total Items </th>
+                                            <th>Total Amount</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <span>User </span>
+                                            </td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td> 
+                                                <div class="table-act-btn-wrap">
+                                                    <a href="#" class="updateinventory-head-t-btn" >Update & Lock Inventory</a>
+                                                    <a href="/inventory/purchase_order_view.html" class="view-head-t-btn"><i class="fa-solid fa-eye"></i>View</a>
+                                                    <a href="/inventory/purchase_orders-edit.html" class="table-head-e-btn" style="width: auto;"><i class="fa-solid fa-pencil"></i>Edit</a>
+                                                    <a href="#" class="table-head-t-btn w-30px"><i class="fa-solid fa-trash"></i></a>
+                                                    <p class="table-ad-tcp"><i class="fa-solid fa-clock-rotate-left"></i><span>Created 1 day ago</span></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-----------Main Start--------------->
+    
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

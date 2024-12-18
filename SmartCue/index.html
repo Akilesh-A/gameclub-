@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snokers</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <!--------------Header Start -------------------->
+    <header>
+        <nav class="navbar navbar-expand-md nav-wrap">
+            <div class="container nav-dar">
+                <span class="navbar-brand">
+                    <a href="#" class="nav-brand"><img src="/assets/images/pool-logo.png" alt="logo" width="70px" /></a>
+                    <span class="nav-i-b" onclick="popUpShow('#PopupInfo')">
+                        <i class="fa fa-info-circle"></i>
+                    </span>
+                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 navul-ta">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-users"></i> Members
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#PopupCreat')"><i
+                                            class="fa-solid fa-plus"></i>New Member</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#popupMembers')"><i
+                                            class="fa-solid fa-list"></i> View History</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="/members/members.html"><i
+                                            class="fa-solid fa-money-bill-1"></i> Members
+                                        <span class="nav-span-bl">(New UI) </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-money-bill-1"></i>Game Money
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#popupViewHistory')"><i
+                                            class="fa-solid fa-list"></i> View History</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#popupCredit')"><i
+                                            class="fa-solid fa-money-bill-1"></i> View Credit
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="#" onclick="popUpShow('#Canteentable')"><i
+                                    class="fa-solid fa-utensils"></i> Canteen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="/dashboard.html"><i
+                                    class="fa-solid fa-gear"></i> Adminland</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>User
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#popupExpense')"><i
+                                            class="fa-solid fa-money-bill-1"></i> Expense</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="/menu/menu.html"><i
+                                            class="fa-solid fa-cart-shopping"></i> Inventory</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="/report.html"><i class="fa-solid fa-file"></i>
+                                        Reports</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#popupReport')"><i
+                                            class="fa-solid fa-lock"></i> Closing</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item drop-c" href="#" onclick="popUpShow('#LogOutPopUp')"><i
+                                            class="fa-solid fa-power-off"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--------------Header End -------------------->
+    <!--------------Main Start--------------------->
+    <section>
+        <div class="ind-sec-wrap">
+            <div class="ind-text-wrap form-center">
+                <div class="ind-title">
+                    <a href="#">Create Table To Get Started!</a>
+                </div>
+                <div>
+                    <form action="" class="ind-form-wrap">
+                        <div class="form-feld-wrap">
+                            <label for="" class="ind-f-label">Table Name: *</label>
+                            <input type="text" placeholder="e.g: Wiraka 1 or Shender 2" class="ind-f-input" />
+                        </div>
+                        <div class="form-feld-wrap">
+                            <label for="" class="ind-f-label">Table Charges: *</label>
+                            <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                    id="chkMinute" type="radio" value="per_min" />
+                                Per Minute</label>
+                            <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                    id="chkGame" type="radio" value="game" />Per Game/Room</label>
+                        </div>
+                        <div class="form-feld-wrap first-dnone">
+                            <label for="" class="ind-f-label">Rate Per Minute: *</label>
+                            <input type="number" placeholder="e.g: 6" class="ind-f-input" />
+                        </div>
+                        <div class="form-feld-wrap first-dnone">
+                            <label for="" class="ind-f-label">Rate Per Minute (2): *</label>
+                            <input type="number" placeholder="e.g: 4" class="ind-f-input mb-0" />
+                            <span class="ind-f-span">You can choose this rate for walk-in customers / century
+                                game</span>
+                        </div>
+                        <div class="form-feld-wrap second-dnone">
+                            <label for="" class="ind-f-label">Game/Room Charges: *</label>
+                            <input type="number" placeholder="e.g: 150" class="ind-f-input mb-0" />
+                        </div>
+                        <div class="form-feld-wrap">
+                            <button class="btn-ind-primary">
+                                <i class="fa fa-plus"></i><span>Create</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section  class="d-none">
+        <div class="container-fluid">
+            <div class="row mt-5">  
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 ind-table-bg snooker-bg-img">
+                    <div class="snooker_table">
+                        <div class="sno-tab-title">
+                            <span class="table_title">1
+                                <span class="price">(1/min - 60/hr)</span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="CheckInS">
+                            <button class="table-c-btn" onclick="Snokertable(1)">
+                                <i class="fa fa-play"></i>
+                                Check In
+                            </button>
+                        </div>
+                        <div class="popup-i-display-none" id="snookertableS">
+                            <div class="sn-tab-c-thwrap">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <span class="sn-tab-c-th-ci">10:41 AM</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="sn-tab-c-th-co">--:-- --</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sn-tab-c-timewrap">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <span class="sn-tab-ctim">00:00:03</span>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <span class="sn-tab-ctim">0.3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sn-tab-c-inputwrap">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="sn-tab-pen-posr mt-1 chenge-input">
+                                            <div class="default-icon">
+                                                <div class="sn-tab-pen-posab default-icon-btn">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+                                                <div>
+                                                    <select class="sn-tab-c-inpsel">
+                                                        <option value="volvo">Volvo</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="mercedes">Mercedes</option>
+                                                        <option value="audi">Audi</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="d-none default-icon">
+                                                <div class="sn-tab-pen-posab default-icon-btn">
+                                                    <i class="fa-solid fa-users"></i>
+                                                </div>
+                                                <div>
+                                                    <input type="text" class="sn-tab-c-inpsel"
+                                                        placeholder="Type Here" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sn-tab-pen-posr mt-1 chenge-input">
+                                            <div class="default-icon">
+                                                <div class="sn-tab-pen-posab default-icon-btn">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+                                                <div>
+                                                    <select class="sn-tab-c-inpsel">
+                                                        <option value="volvo">Volvo</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="mercedes">Mercedes</option>
+                                                        <option value="audi">Audi</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="d-none default-icon">
+                                                <div class="sn-tab-pen-posab default-icon-btn">
+                                                    <i class="fa-solid fa-users"></i>
+                                                </div>
+                                                <div>
+                                                    <input type="text" class="sn-tab-c-inpsel"
+                                                        placeholder="Type Here" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="st-vs">VS</div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="sn-tab-pen-posr2l mt-1 chenge-input">
+                                            <div class="default-icon">
+                                                <div>
+                                                    <select class="sn-tab-c-inpsel">
+                                                        <option value="volvo">Volvo</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="mercedes">Mercedes</option>
+                                                        <option value="audi">Audi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="sn-tab-pen-posab2l default-icon-btn">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-none default-icon">
+                                                <div>
+                                                    <input type="text" class="sn-tab-c-inpsel"
+                                                        placeholder="Type Here" />
+                                                </div>
+                                                <div class="sn-tab-pen-posab2l default-icon-btn">
+                                                    <i class="fa-solid fa-users"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sn-tab-pen-posr2l mt-1 chenge-input">
+                                            <div class="default-icon">
+                                                <div>
+                                                    <select class="sn-tab-c-inpsel">
+                                                        <option value="volvo">Volvo</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="mercedes">Mercedes</option>
+                                                        <option value="audi">Audi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="sn-tab-pen-posab2l default-icon-btn">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-none default-icon">
+                                                <div>
+                                                    <input type="text" class="sn-tab-c-inpsel"
+                                                        placeholder="Type Here" />
+                                                </div>
+                                                <div class="sn-tab-pen-posab2l default-icon-btn">
+                                                    <i class="fa-solid fa-users"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row mt-1">
+                                    <div class="col-6 p-0">
+                                        <button class="sno-tab-caf" onclick="Canteentable(1)">
+                                            <i class="fa fa-cutlery"></i>
+                                            $ <span>0</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <button class="sno-tab-info">
+                                            <i class="fa fa-info"></i>
+                                            info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-2 ps-0" style="padding-right: 2px">
+                                        <button class="snt-pau-btn">
+                                            <i class="fa fa-play"></i>
+                                        </button>
+                                        <button class="snt-pau-btn d-none">
+                                            <i class="fa fa-pause"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-2 ps-0" style="padding-right: 2px">
+                                        <button class="snt-pau-btn">
+                                            <i class="fa-solid fa-share-from-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-8 ps-0 pe-0">
+                                        <button class="snt-pau-cst" onclick="Snokertable()">
+                                            <i class="fa fa-stop"></i> Check Out
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none">
+                            <div class="sn-tab-c-thwrap">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <span class="sn-tab-c-th-ci">10:41 AM</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="sn-tab-c-th-co">--:-- --</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sn-tab-c-timewrap">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <span class="sn-tab-ctim">00:00:03</span>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <span class="sn-tab-ctim">0.3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="print-bill-btn">
+                                    <i class="fa-solid fa-print"></i>
+                                    Print Bill
+                                </button>
+                            </div>
+                            <div>
+                                <button class="table-c-btn mt-0" onclick="Snokertable(1)">
+                                    <i class="fa fa-play"></i>
+                                    Check In
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 ind-table-bg snooker-bg-img bg-opacity">
+                    <div class="snooker_table creat-ntab">
+                        <div class="text-center table-crn-btn-wrap">
+                            <a href="/tables/create.html" class="table-crn-btn btn-opacity">
+                                Add More Table
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------Main End--------------------->
+    <!--------------Popup i Start---------------------->
+
+    <div class="popup-i-display-none" id="PopupInfo">
+        <div class="popup-bg-overlay popup-i-wrapper" onclick="popupRemove('#PopupInfo')"></div>
+        <div class="popup-i-inner form-center">
+            <div class="popup-i-title">
+                <p>Trial Account</p>
+            </div>
+            <div class="popup-i-content">
+                <p>Your free trial will end after 7 day(s)</p>
+            </div>
+            <div class="popup-i-btn-wrap">
+                <button class="popup-i-btn" onclick="popupRemove('#PopupInfo')">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------Popup i End---------------------->
+    <!--------------Popup  Create New Member Start--------->
+    <div class="popup-i-display-none" id="PopupCreat">
+        <div class="popup-bg-overlay popup-create-nm-wrapper" onclick="popupRemove('#PopupCreat')"></div>
+        <div class="popup-create-n-wrap form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#PopupCreat')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-plus"></i>
+                    <p class="m-0">Create New Member</p>
+                </div>
+                <div class="text-end">
+                    <a href="/members/member-create.html" class="popup-crn-tbtn">Try New UI</a>
+                </div>
+            </div>
+            <div class="popup-p2 popu-border-b">
+                <div class="form-feld-wrap">
+                    <label for="" class="ind-f-label">Name: *</label>
+                    <input type="text" placeholder="Name" class="ind-f-input" />
+                </div>
+                <div class="form-feld-wrap">
+                    <label for="" class="ind-f-label">Phone: *</label>
+                    <input type="text" placeholder="Phone" class="ind-f-input" />
+                </div>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#PopupCreat')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+                <button class="popup-crn-btn popce-btn-creat">
+                    <i class="fa-solid fa-check"></i> Create
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------Popup  Create New Member End--------->
+
+    <!--------------View  Menbers PopUp Start------------------------>
+    <div class="popup-i-display-none" id="popupMembers">
+        <div class="popup-bg-overlay" onclick="popupRemove('#popupMembers')"></div>
+        <div class="popup-member-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#popupMembers')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-users"></i>
+                    <p class="m-0">Members</p>
+                </div>
+                <div class="text-end">
+                    <a href="/members/members.html" class="popup-crn-tbtn">Try New UI</a>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p popup-overflow-x">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Tag</th>
+                            <th>Mobile Number</th>
+                            <th>Created At</th>
+                            <th>Total Games</th>
+                            <th>Last Game</th>
+                            <th>Credit</th>
+                            <th>Membership</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list_players_tbody">
+                        <tr class="d-none">
+                            <td colspan="9">
+                                <span class="default_msg">
+                                    <i class="fa fa-exclamation-triangle"></i>
+                                    You have not added any thing yet!
+                                </span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>john</td>
+                            <td>-</td>
+                            <td>1234567890</td>
+                            <td>1 day ago</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td class="viewhisc-c">0</td>
+                            <td>-</td>
+                            <td>
+                                <div class="vh-opt-wrap">
+                                    <button class="vh-edit-btn" onclick="popUpShow('#EditPopUp')">
+                                        <i class="fa fa-pencil"></i>
+                                        Edit
+                                    </button>
+                                    <button class="vh-detail-btn" onclick="popUpShow('#ViewHistory')">
+                                        <i class="fa fa-list"></i>
+                                        Detail
+                                    </button>
+                                    <button class="vh-rece-btn" onclick="popUpShow('#RececiveCredit')">
+                                        <i class="fa-solid fa-money-bill-1"></i>
+                                        Receive Money
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#popupMembers')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------View  Menbers PopUp End------------------------>
+    <!--------------View  History PopUp Start------------------------>
+    <div class="popup-i-display-none" id="popupViewHistory">
+        <div class="popup-bg-overlay" onclick="popupRemove('#popupViewHistory')"></div>
+        <div class="popup-member-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#popupViewHistory')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa fa-list"></i>
+                    <p class="m-0">History</p>
+                    <p class="m-0 label label-info">Playing</p>
+                    <p class="m-0 label label-warning">Unpaid</p>
+                    <p class="m-0 label label-success">Paid</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p popup-overflow-x">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>Member</th>
+                            <th>Table</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Minutes</th>
+                            <th>Rate ($)</th>
+                            <th>Game Money ($)</th>
+                            <th>Canteen ($)</th>
+                            <th>Total</th>
+                            <th>Discount</th>
+                            <th>Grand Total ($)</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>10-09-2024</td>
+                            <td>Member</td>
+                            <td>Table</td>
+                            <td>Check In</td>
+                            <td>Check Out</td>
+                            <td>Minutes</td>
+                            <td>Rate ($)</td>
+                            <td>Game Money ($)</td>
+                            <td>Canteen ($)</td>
+                            <td>Total</td>
+                            <td>Discount</td>
+                            <td>Grand Total ($)</td>
+                            <td>
+                                <div class="vh-opt-wrap">
+                                    <button class="vh-edit-btn">
+                                        <i class="fa fa-pencil"></i>
+                                        Edit
+                                    </button>
+                                    <button class="vh-detail-btn">
+                                        <i class="fa fa-list"></i>
+                                        Detail
+                                    </button>
+                                    <button class="vh-rece-btn">
+                                        <i class="fa-solid fa-money-bill-1"></i>
+                                        Receive Money
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="list_players_tbody">
+                            <td colspan="13">
+                                <span class="default_msg">
+                                    <i class="fa fa-exclamation-triangle"></i>
+                                    You have not added any thing yet!
+                                </span>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th colspan="6">Total</th>
+                            <th class="summary_play_time">0 Mins</th>
+                            <th></th>
+                            <th class="summary_total_bill">$ 0</th>
+                            <th class="summary_canteen_total">$ 0</th>
+                            <th class="summary_grand_total">$ 0</th>
+                            <th class="summary_discount">$ 0</th>
+                            <th></th>
+                            <th class="summary_paid_amount">$ 0</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#popupViewHistory')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------View  Hestory PopUp End------------------------>
+
+    <!--------------View   Credit PopUp Start------------------------>
+    <div class="popup-i-display-none" id="popupCredit">
+        <div class="popup-bg-overlay" onclick="popupRemove('#popupCredit')"></div>
+        <div class="popup-member-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#popupCredit')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-money-bill-1"></i>
+                    <p class="m-0">Credit</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p popup-overflow-x">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Mobile Number</th>
+                            <th>Last Game</th>
+                            <th>Credit ($)</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Mobile Number</th>
+                            <th>Last Game</th>
+                            <th>Credit ($)</th>
+                            <th>
+                                <div class="vh-opt-wrap">
+                                    <button class="vh-edit-btn">
+                                        <i class="fa fa-pencil"></i>
+                                        Edit
+                                    </button>
+                                    <button class="vh-detail-btn">
+                                        <i class="fa fa-list"></i>
+                                        Detail
+                                    </button>
+                                    <button class="vh-rece-btn">
+                                        <i class="fa-solid fa-money-bill-1"></i>
+                                        Receive Money
+                                    </button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr class="list_players_tbody">
+                            <td colspan="6">
+                                <span class="default_msg">
+                                    <i class="fa fa-exclamation-triangle"></i>
+                                    You have not added any thing yet!
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4">Total Credit:</th>
+                            <th class="summary_play_time">0</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#popupCredit')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------View   Credit PopUp End------------------------>
+
+    <!-------------- Expense PopUp Start------------------------>
+    <div class="popup-i-display-none" id="popupExpense">
+        <div class="popup-bg-overlay" onclick="popupRemove('#popupExpense')"></div>
+        <div class="popup-member-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#popupExpense')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-money-bill-1"></i>
+                    <p class="m-0">Expense</p>
+                </div>
+                <div class="text-end">
+                    <a href="/expense/expense.html" class="popup-crn-tbtn">Try New UI</a>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p">
+                <div class="row exp-mar-t">
+                    <div class="col-lg-4 col-md-12 exp-border-r">
+                        <div>
+                            <p class="popup-exp-title">Add Expense</p>
+                            <div class="form-feld-wrap-exp">
+                                <label for="" class="exp-f-label">Expense Name:</label>
+                                <input type="text" placeholder="New Expense Name" class="exp-f-input" />
+                            </div>
+                            <div class="form-feld-wrap-exp">
+                                <label for="" class="exp-f-label">Amount:</label>
+                                <input type="text" placeholder="Amount" class="exp-f-input" />
+                            </div>
+                            <div class="text-end">
+                                <button class="popup-crn-btn popce-btn-creat">
+                                    <i class="fa-solid fa-check"></i> Add Expense
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 exp-pad-left">
+                        <p class="popup-exp-title">Expense List</p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Expense</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>340</th>
+                                    <th>20-09-2024</th>
+                                    <th>450</th>
+                                </tr>
+                                <tr class="list_players_tbody">
+                                    <td colspan="6">
+                                        <span class="default_msg">
+                                            <i class="fa fa-exclamation-triangle"></i>
+                                            You have not added any thing yet!
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3">Total Expense Today:</th>
+                                    <th class="summary_play_time">0</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#popupExpense')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-------------- Expense PopUp End------------------------>
+    <!-------------- Report PopUp Start------------------------>
+    <div class="popup-i-display-none" id="popupReport">
+        <div class="popup-bg-overlay" onclick="popupRemove('#popupReport')"></div>
+        <div class="popup-report-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#popupReport')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <p class="m-0">Reports</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p">
+                <form>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <i class="fa-regular fa-money-bill-1"></i> Total Game Bill
+                                    <br />
+                                    <small>(<span class="play_time">0</span>
+                                        <span>mins played</span>)</small>:
+                                </th>
+                                <th>
+                                    <span class="text-figure game_income">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <i class="fa fa-shopping-cart"></i> Canteen Sale
+                                    <br />
+                                    <small>(<span class="canteen_count">0</span>
+                                        <span>items sold</span>, <small>$</small>
+                                        <span class="canteen_profit">0</span>
+                                        <span> profit</span>)</small>:
+                                </th>
+                                <th>
+                                    <span class="text-figure canteen_income">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <i class="fa-regular fa-money-bill-1"></i> Gross Total<br /><small>(Game Bill +
+                                        Canteen Sale)</small>:
+                                </th>
+                                <th>
+                                    <span class="text-figure gross_income text-info">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <i class="fa fa-minus"></i> Discount<br /><small>(If Any)</small>
+                                </th>
+                                <th>
+                                    <span class="text-figure discount">0</span> <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <i class="fa-regular fa-money-bill-1"></i> Net Sale:<br /><small>(Gross Total -
+                                        Discount)</small>
+                                </th>
+                                <th>
+                                    <span class="text-figure net_sale text-info">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <i class="fa-regular fa-money-bill-1"></i> Total Cash
+                                    Collected: <br /><small>(Game <span class="paid_amount">0</span>
+                                        <small>$</small> + Canteen
+                                        <span class="paid_amount_canteen">0</span>
+                                        <small>$</small>)</small>:
+                                </th>
+                                <th>
+                                    <span class="text-figure total_cash_collected text-info">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th><i class="fa fa-minus"></i> Expense:</th>
+                                <th>
+                                    <span class="text-figure total_expense text-danger">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Profit: <br /><small>(Cash Collected - Expense)</small>
+                                </th>
+                                <th>
+                                    <span class="text-figure total_profit text-success">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Expected Closing Cash: <br /><small>(Net Sale - Expense)</small>
+                                </th>
+                                <th>
+                                    <span class="text-figure expected_closing text-success">0</span>
+                                    <small>$</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="vertical-align: middle">Closing Cash:</th>
+                                <td class="pt-0 pb-0">
+                                    <input min="0" name="closing_cash" id="closing_cash" autofocus="" step="0.001"
+                                        required="" class="ind-f-input" type="number" placeholder="Closing Cash" />
+                                </td>
+                            </tr>
+                            <tr class="d-none">
+                                <th>Meter Reading:</th>
+                                <td>
+                                    <input value="0" name="meter_reading" id="meter_reading" autofocus="" step="0.001"
+                                        required="" class="ind-f-input p-0" type="number" placeholder="Meter Reading" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <button type="submit" class="report-btn-popup">
+                                        <i class="fa fa-print"></i> Print &amp; Close Today!
+                                    </button>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#popupReport')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-------------- Report PopUp End------------------------>
+    <!---------------Canteen  PopUp Start--------------------->
+    <div class="popup-i-display-none" id="Canteentable">
+        <div class="popup-bg-overlay popup-create-nm-wrapper" onclick="popupRemove('#Canteentable')"></div>
+        <div class="popup-create-n-wrap form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#Canteentable')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-utensils"></i>
+                    <p class="m-0">Canteen</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p popup-overflow-x">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Member</th>
+                            <th>Item</th>
+                            <th>Rate</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>User</td>
+                            <td>Cola</td>
+                            <td>40</td>
+                            <td>1</td>
+                            <td>40</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="list_players_tbody">
+                            <th colspan="5" class="text-end">Total:</th>
+                            <th>0</th>
+                        </tr>
+                        <tr>
+                            <td colspan="5"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <select class="cante-input-s">
+                                    <option value="volvo">Player</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </th>
+                            <th colspan="2">
+                                <select class="cante-input-s">
+                                    <option value="volvo">Nothing Selected</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </th>
+                            <th>
+                                <input type="number" placeholder="Qty" class="cante-input-s cnteen-inp" />
+                            </th>
+                            <th>
+                                <button class="popup-crn-btn popce-btn-creat w-100 canteen-btn">
+                                    <i class="fa-solid fa-check"></i> Add Item
+                                </button>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#Canteentable')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!---------------Canteen  PopUp End--------------------->
+    <!---------------Edit  PopUp Start--------------------->
+    <div class="popup-i-display-none" id="EditPopUp">
+        <div class="popup-bg-overlay popup-create-nm-wrapper" onclick="popupRemove('#EditPopUp')"></div>
+        <div class="popup-create-n-wrap form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#EditPopUp')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-plus"></i>
+                    <p class="m-0">Edit Member</p>
+                </div>
+            </div>
+            <div class="popup-p2 popu-border-b">
+                <div class="form-feld-wrap">
+                    <label for="" class="ind-f-label">Name: *</label>
+                    <input type="text" placeholder="Name" class="ind-f-input" />
+                </div>
+                <div class="form-feld-wrap">
+                    <label for="" class="ind-f-label">Phone: *</label>
+                    <input type="text" placeholder="Phone" class="ind-f-input" />
+                </div>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#EditPopUp')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+                <button class="popup-crn-btn popce-btn-creat">
+                    <i class="fa-solid fa-check"></i> Save
+                </button>
+            </div>
+        </div>
+    </div>
+    <!---------------Edit  PopUp End--------------------->
+    <!--------------View  History PopUp Start------------------------>
+    <div class="popup-i-display-none" id="ViewHistory">
+        <div class="popup-bg-overlay" onclick="popupRemove('#ViewHistory')"></div>
+        <div class="popup-member-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#ViewHistory')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa fa-list"></i>
+                    <p class="m-0">Credit Details</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p popup-overflow-x">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>Table</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Minutes</th>
+                            <th>Rate ($)</th>
+                            <th>Game Money ($)</th>
+                            <th>Canteen ($)</th>
+                            <th>Total</th>
+                            <th>Discount</th>
+                            <th>Grand Total ($)</th>
+                            <th>Paid ($)</th>
+                            <th>Balance ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>10-09-2024</td>
+                            <td>Table</td>
+                            <td>Check In</td>
+                            <td>Check Out</td>
+                            <td>Minutes</td>
+                            <td>Rate ($)</td>
+                            <td>Game Money ($)</td>
+                            <td>Canteen ($)</td>
+                            <td>Total</td>
+                            <td>Discount</td>
+                            <td>Grand Total ($)</td>
+                            <th>Paid ($)</th>
+                            <th>Balance ($)</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#ViewHistory')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------View  Hestory PopUp End------------------------>
+    <!--------------Receive Credit Money Start--------->
+    <div class="popup-i-display-none" id="RececiveCredit">
+        <div class="popup-bg-overlay popup-create-nm-wrapper" onclick="popupRemove('#RececiveCredit')"></div>
+        <div class="popup-create-n-wrap form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#RececiveCredit')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-list"></i>
+                    <p class="m-0">
+                        Receive Credit Money From
+                        <u> <span>john</span> (Rs <span>0</span> )</u>
+                    </p>
+                </div>
+            </div>
+            <div class="popup-p2 popu-border-b">
+                <div class="form-feld-wrap">
+                    <label for="" class="ind-f-label">Receive Amount:</label>
+                    <input type="text" placeholder="Name" class="ind-f-input" />
+                </div>
+                <div class="col-md-6 ms-3 mb-4">
+                    <label><input type="radio" name="add_credit_payment_via" value="cash" />
+                        Cash</label>
+                    <br />
+                    <label><input type="radio" name="add_credit_payment_via" value="bank" />
+                        Bank</label>
+                    <br />
+                </div>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#RececiveCredit')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+                <button class="popup-crn-btn popce-btn-creat">
+                    <i class="fa-solid fa-check"></i> Save
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------Receive Credit Money End--------->
+    <!--------------Switch table PopUp Start------------------------>
+    <div class="popup-i-display-none" id="SwitchTable">
+        <div class="popup-bg-overlay" onclick="popupRemove('#SwitchTable')"></div>
+        <div class="popup-member-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#SwitchTable')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <p class="m-0">Switch Table</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p">
+                <div class="row mt-4">
+                    <div class="col-lg-3 col-md-6 ind-table-bg snooker-bg-img">
+                        <div class="snooker_table-2">
+                            <div class="table-switch-wrapper">
+                                <p>Table 1</p>
+                                <button class="switch-table-btn">
+                                    <i class="fa-solid fa-play"></i>Select Table
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 ind-table-bg snooker-bg-img">
+                        <div class="snooker_table-2">
+                            <div class="table-switch-wrapper">
+                                <p>Table 1</p>
+                                <button class="switch-table-btn">
+                                    <i class="fa-solid fa-play"></i>Select Table
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 ind-table-bg snooker-bg-img">
+                        <div class="snooker_table-2">
+                            <div class="table-switch-wrapper">
+                                <p>Table 1</p>
+                                <button class="switch-restrict-btn">
+                                    <i class="fa-solid fa-play"></i>Select Table
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 ind-table-bg snooker-bg-img">
+                        <div class="snooker_table-2">
+                            <div class="table-switch-wrapper">
+                                <p>Table 1</p>
+                                <button class="switch-table-btn">
+                                    <i class="fa-solid fa-play"></i>Select Table
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#SwitchTable')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------Switch table PopUp End------------------------>
+    <!--------------Popup  Create New Member Start--------->
+    <div class="popup-i-display-none" id="CraeteNewMemeber">
+        <div class="popup-bg-overlay popup-create-nm-wrapper" onclick="popupRemove('#CraeteNewMemeber')"></div>
+        <div class="popup-create-n-wrap form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#CraeteNewMemeber')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-solid fa-info"></i>
+                    <p class="m-0">Match Info</p>
+                </div>
+            </div>
+            <div class="popup-p2 popu-border-b">
+                <div class="form-feld-wrap">
+                    <textarea name="" id="" class="ind-f-input fnt-14" rows="4"
+                        placeholder="Eg. Bilal vs Zuhair (3-4)"></textarea>
+                </div>
+            </div>
+            <div class="popup-p popupcr-df">
+                <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#CraeteNewMemeber')">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+                <button class="popup-crn-btn popce-btn-creat">
+                    <i class="fa-solid fa-check"></i> Save
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------Popup  Create New Member End--------->
+    <!-------------- Print Bill PopUp Start------------------------>
+    <div class="popup-i-display-none" id="BillPopUp">
+        <div class="popup-bg-overlay" onclick="popupRemove('#BillPopUp')"></div>
+        <div class="popup-report-wrapper form-center">
+            <div class="popu-border-b popup-p">
+                <button class="popup-cr-n-cbtn" onclick="popupRemove('#BillPopUp')">
+                    ×
+                </button>
+                <div class="popup-cr-title">
+                    <i class="fa-regular fa-money-bill-1"></i>
+                    <p class="m-0">Bill</p>
+                </div>
+            </div>
+            <div class="popu-border-b popup-p">
+                <table class="table table-bordered ind-table-start">
+                    <tbody>
+                        <tr>
+                            <th>Bill No.</th>
+                            <th>178058</th>
+                        </tr>
+                        <tr>
+                            <th>Member</th>
+                            <th>Walk In Customer</th>
+                        </tr>
+                        <tr>
+                            <th>Check In/Out</th>
+                            <th>05:07 PM 05:16 PM</th>
+                        </tr>
+                        <tr>
+                            <th>Time Played</th>
+                            <th>00:00:06 (Pause: 00:08:58)</th>
+                        </tr>
+                        <tr>
+                            <th>Time Played</th>
+                            <th>
+                                <div class="d-inline-block">
+                                    <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                            type="radio" value="1/Min" />$ 1/Min</label>
+                                    <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                            type="radio" value="2/Min" />$ 2/Min</label>
+                                </div>
+                                <input required="" class="ind-bill-inp" type="number" />
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Game Money</th>
+                            <th>$ <span>0</span></th>
+                        </tr>
+                        <tr>
+                            <th>Canteen</th>
+                            <th>$ 0</th>
+                        </tr>
+                        <tr>
+                            <th>Grand Total</th>
+                            <th><span>$ 0</span></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-feld-wrap">
+                            <label for="" class="ind-f-label">Discount:</label>
+                            <input type="number" placeholder="Discount" class="ind-f-input" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-feld-wrap">
+                            <label for="" class="ind-f-label">Received Amount:</label>
+                            <input type="number" placeholder="0" class="ind-f-input" />
+                        </div>
+                        <div class="form-feld-wrap">
+                            <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                    type="radio" value=" Cash" />
+                                Cash</label>
+                            <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                    type="radio" value="Bank" />Bank</label>
+                            <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                    type="radio" value=" Topup" />
+                                Topup</label>
+                            <label class="ind-f-label ind-ratio-f"><input required="" name="input_table_type"
+                                    type="radio" value="Points" />Points</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-p popupcr-df">
+                    <button class="popup-crn-btn popce-btn-cl" onclick="popupRemove('#BillPopUp')">
+                        <i class="fa-solid fa-xmark"></i> Close
+                    </button>
+                    <button class="popup-crn-btn popce-btn-creat">
+                        <i class="fa-solid fa-print"></i> Save & Print Bill
+                    </button>
+                    <label class="ind-f-label ind-ratio-f justify-content-end"><input required="" name=""
+                            type="checkbox" value="Points" />Print
+                        Bill</label>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <!-------------- Print Bill PopUp End------------------------>
+    <!-------------- log Out PopUp Start------------------------>
+    <div class="popup-i-display-none" id="LogOutPopUp">
+        <div class="popup-bg-overlay popup-i-wrapper" onclick="popupRemove('#LogOutPopUp')"></div>
+        <div class="popup-i-inner">
+            <div class="logout-warning-wrapper">
+                <i class="fa-solid fa-exclamation"></i>
+            </div>
+            <div class="popup-i-content">
+                <p>Are you sure, you want to logout ?</p>
+            </div>
+            <div class="popup-i-btn-wrap">
+                <button class="popup-logout-btn" onclick="popupRemove('#LogOutPopUp')">
+                    No
+                </button>
+                <button class="popup-i-btn">Yes</button>
+            </div>
+        </div>
+    </div>
+    <!-------------- log Out PopUp End------------------------>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snokers</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body style="background-color: #f2f6fc;">
+    <div id="AdminNavBar"></div>
+    <div id="AdminSideBar"></div>
+    <!---------Main Start--------->
+    <main>
+        <section>
+            <div class="admin-padding-left" id="adminPaddingLeft">
+                <div class="admin-hed-bg-wrap">
+                    <div class="container-fluid">
+                        <div>
+                            <a href="/dashboard.html" class="ad-m-t">Adminland</a>
+                            <span class="admin-t-p">/ Table Rate Rules </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="table-p-wrap mt-4">
+                        <div  class="table-p-head-wrap">
+                            <div>
+                                <p class="m-0 table-p-head-t" ><i class="fa-solid fa-plus"></i> Create Rate Rule</p>
+                            </div>
+                        </div>
+                        <div  class="table-p-body-wrap">
+                            <form >
+                                <div class="row row-gap-3">
+                                    <div class="col-md-12 col-lg-12">
+                                        <label class="ad-p-label">Search:</label>
+                                        <input value="" type="text" class="ad-p-input form-control" name="date_from" placeholder="Search here">
+                                    </div>
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="form-feld-wrap">
+                                            <label for="" class="ad-p-label">Apply on follow days:</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="monday" type="checkbox" value="per_min">
+                                            <label class="tbl-rat-rule-label" for="monday"> Monday</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="Tuesday" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="Tuesday">Tuesday</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="Wednesday" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="Wednesday">Wednesday</label><br>
+                                            
+                                            <input required="" name="input_table_type" type="checkbox" id="Thursday" value="game">
+                                            <label class="tbl-rat-rule-label" for="Thursday">Thursday</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="Friday" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="Friday">Friday</label><br>
+                                            
+                                            <input required="" name="input_table_type"id="Saturday" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="Saturday">Saturday</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="Sunday" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="Sunday">Sunday</label><br>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-4 col-lg-4">
+                                        <label class="ad-p-label">Start rule at:</label>
+                                        <select class=" ad-p-input  form-control">
+                                            <option value="12:00 AM">12:00 AM</option>
+                                            <option value="12:15 AM">12:15 AM</option>
+                                            <option value="12:30 AM">12:30 AM</option>
+                                            <option value="12:45 AM">12:45 AM</option>
+                                            <option value="01:00 AM">01:00 AM</option>
+                                            <option value="01:15 AM">01:15 AM</option>
+                                            <option value="01:30 AM">01:30 AM</option>
+                                            <option value="01:45 AM">01:45 AM</option>
+                                            <option value="02:00 AM">02:00 AM</option>
+                                            <option value="02:15 AM">02:15 AM</option>
+                                            <option value="02:30 AM">02:30 AM</option>
+                                            <option value="02:45 AM">02:45 AM</option>
+                                            <option value="03:00 AM">03:00 AM</option>
+                                            <option value="03:15 AM">03:15 AM</option>
+                                            <option value="03:30 AM">03:30 AM</option>
+                                            <option value="03:45 AM">03:45 AM</option>
+                                            <option selected="" value="04:00 AM">04:00 AM</option>
+                                            <option value="04:15 AM">04:15 AM</option>
+                                            <option value="04:30 AM">04:30 AM</option>
+                                            <option value="04:45 AM">04:45 AM</option>
+                                            <option value="05:00 AM">05:00 AM</option>
+                                            <option value="05:15 AM">05:15 AM</option>
+                                            <option value="05:30 AM">05:30 AM</option>
+                                            <option value="05:45 AM">05:45 AM</option>
+                                            <option value="06:00 AM">06:00 AM</option>
+                                            <option value="06:15 AM">06:15 AM</option>
+                                            <option value="06:30 AM">06:30 AM</option>
+                                            <option value="06:45 AM">06:45 AM</option>
+                                            <option value="07:00 AM">07:00 AM</option>
+                                            <option value="07:15 AM">07:15 AM</option>
+                                            <option value="07:30 AM">07:30 AM</option>
+                                            <option value="07:45 AM">07:45 AM</option>
+                                            <option value="08:00 AM">08:00 AM</option>
+                                            <option value="08:15 AM">08:15 AM</option>
+                                            <option value="08:30 AM">08:30 AM</option>
+                                            <option value="08:45 AM">08:45 AM</option>
+                                            <option value="09:00 AM">09:00 AM</option>
+                                            <option value="09:15 AM">09:15 AM</option>
+                                            <option value="09:30 AM">09:30 AM</option>
+                                            <option value="09:45 AM">09:45 AM</option>
+                                            <option value="10:00 AM">10:00 AM</option>
+                                            <option value="10:15 AM">10:15 AM</option>
+                                            <option value="10:30 AM">10:30 AM</option>
+                                            <option value="10:45 AM">10:45 AM</option>
+                                            <option value="11:00 AM">11:00 AM</option>
+                                            <option value="11:15 AM">11:15 AM</option>
+                                            <option value="11:30 AM">11:30 AM</option>
+                                            <option value="11:45 AM">11:45 AM</option>
+                                            <option value="12:00 PM">12:00 PM</option>
+                                            <option value="12:15 PM">12:15 PM</option>
+                                            <option value="12:30 PM">12:30 PM</option>
+                                            <option value="12:45 PM">12:45 PM</option>
+                                            <option value="01:00 PM">01:00 PM</option>
+                                            <option value="01:15 PM">01:15 PM</option>
+                                            <option value="01:30 PM">01:30 PM</option>
+                                            <option value="01:45 PM">01:45 PM</option>
+                                            <option value="02:00 PM">02:00 PM</option>
+                                            <option value="02:15 PM">02:15 PM</option>
+                                            <option value="02:30 PM">02:30 PM</option>
+                                            <option value="02:45 PM">02:45 PM</option>
+                                            <option value="03:00 PM">03:00 PM</option>
+                                            <option value="03:15 PM">03:15 PM</option>
+                                            <option value="03:30 PM">03:30 PM</option>
+                                            <option value="03:45 PM">03:45 PM</option>
+                                            <option value="04:00 PM">04:00 PM</option>
+                                            <option value="04:15 PM">04:15 PM</option>
+                                            <option value="04:30 PM">04:30 PM</option>
+                                            <option value="04:45 PM">04:45 PM</option>
+                                            <option value="05:00 PM">05:00 PM</option>
+                                            <option value="05:15 PM">05:15 PM</option>
+                                            <option value="05:30 PM">05:30 PM</option>
+                                            <option value="05:45 PM">05:45 PM</option>
+                                            <option value="06:00 PM">06:00 PM</option>
+                                            <option value="06:15 PM">06:15 PM</option>
+                                            <option value="06:30 PM">06:30 PM</option>
+                                            <option value="06:45 PM">06:45 PM</option>
+                                            <option value="07:00 PM">07:00 PM</option>
+                                            <option value="07:15 PM">07:15 PM</option>
+                                            <option value="07:30 PM">07:30 PM</option>
+                                            <option value="07:45 PM">07:45 PM</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4">
+                                        <label class="ad-p-label"> End rule at:</label>
+                                        <select class=" ad-p-input  form-control">
+                                            <option value="12:00 AM">12:00 AM</option>
+                                            <option value="12:15 AM">12:15 AM</option>
+                                            <option value="12:30 AM">12:30 AM</option>
+                                            <option value="12:45 AM">12:45 AM</option>
+                                            <option value="01:00 AM">01:00 AM</option>
+                                            <option value="01:15 AM">01:15 AM</option>
+                                            <option value="01:30 AM">01:30 AM</option>
+                                            <option value="01:45 AM">01:45 AM</option>
+                                            <option value="02:00 AM">02:00 AM</option>
+                                            <option value="02:15 AM">02:15 AM</option>
+                                            <option value="02:30 AM">02:30 AM</option>
+                                            <option value="02:45 AM">02:45 AM</option>
+                                            <option value="03:00 AM">03:00 AM</option>
+                                            <option value="03:15 AM">03:15 AM</option>
+                                            <option value="03:30 AM">03:30 AM</option>
+                                            <option value="03:45 AM">03:45 AM</option>
+                                            <option selected="" value="04:00 AM">04:00 AM</option>
+                                            <option value="04:15 AM">04:15 AM</option>
+                                            <option value="04:30 AM">04:30 AM</option>
+                                            <option value="04:45 AM">04:45 AM</option>
+                                            <option value="05:00 AM">05:00 AM</option>
+                                            <option value="05:15 AM">05:15 AM</option>
+                                            <option value="05:30 AM">05:30 AM</option>
+                                            <option value="05:45 AM">05:45 AM</option>
+                                            <option value="06:00 AM">06:00 AM</option>
+                                            <option value="06:15 AM">06:15 AM</option>
+                                            <option value="06:30 AM">06:30 AM</option>
+                                            <option value="06:45 AM">06:45 AM</option>
+                                            <option value="07:00 AM">07:00 AM</option>
+                                            <option value="07:15 AM">07:15 AM</option>
+                                            <option value="07:30 AM">07:30 AM</option>
+                                            <option value="07:45 AM">07:45 AM</option>
+                                            <option value="08:00 AM">08:00 AM</option>
+                                            <option value="08:15 AM">08:15 AM</option>
+                                            <option value="08:30 AM">08:30 AM</option>
+                                            <option value="08:45 AM">08:45 AM</option>
+                                            <option value="09:00 AM">09:00 AM</option>
+                                            <option value="09:15 AM">09:15 AM</option>
+                                            <option value="09:30 AM">09:30 AM</option>
+                                            <option value="09:45 AM">09:45 AM</option>
+                                            <option value="10:00 AM">10:00 AM</option>
+                                            <option value="10:15 AM">10:15 AM</option>
+                                            <option value="10:30 AM">10:30 AM</option>
+                                            <option value="10:45 AM">10:45 AM</option>
+                                            <option value="11:00 AM">11:00 AM</option>
+                                            <option value="11:15 AM">11:15 AM</option>
+                                            <option value="11:30 AM">11:30 AM</option>
+                                            <option value="11:45 AM">11:45 AM</option>
+                                            <option value="12:00 PM">12:00 PM</option>
+                                            <option value="12:15 PM">12:15 PM</option>
+                                            <option value="12:30 PM">12:30 PM</option>
+                                            <option value="12:45 PM">12:45 PM</option>
+                                            <option value="01:00 PM">01:00 PM</option>
+                                            <option value="01:15 PM">01:15 PM</option>
+                                            <option value="01:30 PM">01:30 PM</option>
+                                            <option value="01:45 PM">01:45 PM</option>
+                                            <option value="02:00 PM">02:00 PM</option>
+                                            <option value="02:15 PM">02:15 PM</option>
+                                            <option value="02:30 PM">02:30 PM</option>
+                                            <option value="02:45 PM">02:45 PM</option>
+                                            <option value="03:00 PM">03:00 PM</option>
+                                            <option value="03:15 PM">03:15 PM</option>
+                                            <option value="03:30 PM">03:30 PM</option>
+                                            <option value="03:45 PM">03:45 PM</option>
+                                            <option value="04:00 PM">04:00 PM</option>
+                                            <option value="04:15 PM">04:15 PM</option>
+                                            <option value="04:30 PM">04:30 PM</option>
+                                            <option value="04:45 PM">04:45 PM</option>
+                                            <option value="05:00 PM">05:00 PM</option>
+                                            <option value="05:15 PM">05:15 PM</option>
+                                            <option value="05:30 PM">05:30 PM</option>
+                                            <option value="05:45 PM">05:45 PM</option>
+                                            <option value="06:00 PM">06:00 PM</option>
+                                            <option value="06:15 PM">06:15 PM</option>
+                                            <option value="06:30 PM">06:30 PM</option>
+                                            <option value="06:45 PM">06:45 PM</option>
+                                            <option value="07:00 PM">07:00 PM</option>
+                                            <option value="07:15 PM">07:15 PM</option>
+                                            <option value="07:30 PM">07:30 PM</option>
+                                            <option value="07:45 PM">07:45 PM</option>
+                                            
+                                        </select>
+                                    </div>          
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="form-feld-wrap">
+                                            <label for="" class="ad-p-label">Apply to following tables:</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="1" type="checkbox" value="per_min">
+                                            <label class="tbl-rat-rule-label" for="1"> 1</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="2" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="2">2</label><br>
+                                            
+                                            <input required="" name="input_table_type" id="3" type="checkbox" value="game">
+                                            <label class="tbl-rat-rule-label" for="3">3</label><br>
+                                            
+                                            <input required="" name="input_table_type" type="checkbox" id="4" value="game">
+                                            <label class="tbl-rat-rule-label" for="4">4</label><br>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="form-feld-wrap">
+                                            <label for="" class="ad-p-label">New Rate Type:</label><br>
+                                            <label class="tbl-rat-rule-label"><input required="" name="input_table_type" type="radio" value="per_min"> Per Minute</label><br>
+                                            <label class="tbl-rat-rule-label"><input required="" name="input_table_type" type="radio" value="game">Per Game/Room</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4">
+                                        <label class="ad-p-label">New Rate in $:</label>
+                                        <input value="" type="text" class="ad-p-input form-control" name="date_from" placeholder="Search here">
+                                    </div>
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="form-feld-wrap">
+                                            <label for="" class="ad-p-label">New Rate Type:</label><br>
+                                            <label class="tbl-rat-rule-label"><input required="" name="input_table_type" type="radio" value="per_min"> Enable</label><br>
+                                            <label class="tbl-rat-rule-label"><input required="" name="input_table_type" type="radio" value="game">Disable</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-1 text-end">
+                                    <a href="/table-rate-rules/table-rate-rules.html" class="popup-crn-btn popce-btn-creat"><i class="fa-solid fa-check"></i> Submit</a>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!---------Main End----------->
+    
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
